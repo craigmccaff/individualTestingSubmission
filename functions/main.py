@@ -1,3 +1,8 @@
 import displayData
 
-displayData.displayData()
+
+def main():
+    displayData.displayData()
+
+
+main()

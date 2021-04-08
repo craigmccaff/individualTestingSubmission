@@ -1,5 +1,6 @@
 import filterData, goalDifference, pointsCalculator
 
+
 def displayData():
     data = filterData.filterData()
     headings = filterData.getHeadings()
@@ -7,4 +8,3 @@ def displayData():
         print(headings[index], ": ", data[index])
     print(goalDifference.goalDifferenceCalculator(data))
     print(pointsCalculator.pointsCalculator(data))
-

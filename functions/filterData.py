@@ -1,5 +1,6 @@
 import readCSV, searchTeam
 
+
 def filterData():
     teamName = searchTeam.formattedSearchTeam()
     table = readCSV.getData()
@@ -12,6 +13,6 @@ def filterData():
         print("Team name not found. Please enter: red, blue, yellow, green, orange, purple")
         teamName = searchTeam.formattedSearchTeam()
 
+
 def getHeadings():
     return readCSV.getData()[0]
-
