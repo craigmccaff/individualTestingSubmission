@@ -10,7 +10,8 @@ To run this project, simply run the file [main](functions/main.py)
 
 # Data Load File:
 
-The CSV file is loaded in from [readCSV](functions/readCSV.py)
+- [teamTable](resources/teamTable.csv)
+- [readCSV](functions/readCSV.py)
 
 # Functions To Be Doubled:
 
