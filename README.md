@@ -15,6 +15,7 @@ To run this project, simply run the file [main](functions/main.py)
 
 # Functions To Be Doubled:
 
+- [readCSV](functions/readCSV.py)
 - [goalDifference](functions/goalDifference.py)
 - [pointsCalculator](functions/pointsCalculator.py)
 - [filterData](functions/filterData.py)
