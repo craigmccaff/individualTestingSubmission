@@ -1,9 +1,8 @@
 import readCSV, searchTeam
 
 
-def filterData():
-    teamName = searchTeam.formattedSearchTeam()
-    table = readCSV.getData()
+def filterData(teamName, file = "teamTable.csv"):
+    table = readCSV.getData(file)
     flag = True
 
     while flag:
@@ -14,5 +13,5 @@ def filterData():
         teamName = searchTeam.formattedSearchTeam()
 
 
-def getHeadings():
-    return readCSV.getData()[0]
+def getHeadings(file = "mostRecentTableQuery.csv"):
+    return readCSV.getData(file)[0]

@@ -18,9 +18,14 @@ To run this project, simply run the file [main](functions/main.py)
 - [readCSV](functions/readCSV.py)
 - [goalDifference](functions/goalDifference.py)
 - [pointsCalculator](functions/pointsCalculator.py)
-- [filterData](functions/filterData.py)
+- [filterData / getHeadings](functions/filterData.py)
 - [searchTeam](functions/searchTeam.py)
 
 # Link to Unit Tests:
 
 - [tests](tests)
+
+# Important Examples
+
+- Adapter [filterDataAdapter](functions/filterDataAdapter.py)
+- Faking [[fakingData](functions/fakingData.py) (features in [readCSV](functions/readCSV.py), [filterDataAdapter](functions/filterDataAdapter.py) and [searchTeam](functions/searchTeam.py)), [mostRecentTableQuery](resources/mostRecentTableQuery.csv), [mostRecentUserInput](resources/mostRecentUserInput.txt)]

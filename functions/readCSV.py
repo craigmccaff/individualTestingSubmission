@@ -1,10 +1,11 @@
-import csv
+import csv, fakingData
 
 
-def getData():
+def getData(fileName):
     dataList = []
-    with open("../resources/teamTable.csv") as CSVData:
+    with open("../resources/" + fileName) as CSVData:
         fileReader = csv.reader(CSVData)
         for row in fileReader:
             dataList.append(row)
+    fakingData.writeToCSV(dataList)
     return dataList

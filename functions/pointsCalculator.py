@@ -1,6 +1,4 @@
-def pointsCalculator(teamData):
-    wins = int(teamData[3])
-    draws = int(teamData[4])
-    points = (wins*3) + draws
+def pointsCalculator(wins, draws):
+    points = (int(wins)*3) + int(draws)
     result = "Points Total: " + str(points)
     return result

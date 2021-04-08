@@ -1,8 +1,8 @@
-import displayData
+import displayData, searchTeam
 
 
 def main():
-    displayData.displayData()
+    displayData.displayData(searchTeam.formattedSearchTeam())
 
 
 main()
