@@ -16,4 +16,3 @@ def getRecentUserInput():
     with open("../resources/mostRecentUserInput.txt", 'r') as fakingInput:
         result = fakingInput.readline()
         return result
-

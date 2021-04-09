@@ -6,5 +6,6 @@ def filterDataAdapter():
 
 
 def getHeadingsAdapter():
-    filterData.getHeadings("mostRecentTableQuery.csv")
+    filterData.getHeadings("headingsStub.csv")
+
 
