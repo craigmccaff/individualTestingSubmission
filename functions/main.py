@@ -1,4 +1,4 @@
-import displayData, searchTeam
+from functions import displayData, searchTeam
 
 
 def main():

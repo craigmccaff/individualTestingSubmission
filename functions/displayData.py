@@ -1,4 +1,4 @@
-import filterData, goalDifference, pointsCalculator
+from functions import filterData, goalDifference, pointsCalculator
 
 
 def displayData(team):

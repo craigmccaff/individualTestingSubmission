@@ -1,11 +1,12 @@
-import filterData, fakingData
+from functions import filterData, fakingData
 
 
 def filterDataAdapter():
-    filterData.filterData(fakingData.getRecentUserInput(), "mostRecentTableQuery.csv")
+    return filterData.filterData(fakingData.getRecentUserInput(), "mostRecentTableQuery.csv")
 
 
 def getHeadingsAdapter():
-    filterData.getHeadings("headingsStub.csv")
+    return filterData.getHeadings("headingsStub.csv")
 
 
+getHeadingsAdapter()

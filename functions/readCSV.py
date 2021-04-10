@@ -1,4 +1,4 @@
-import csv, fakingData
+import csv
 
 
 def getData(fileName):
@@ -7,5 +7,4 @@ def getData(fileName):
         fileReader = csv.reader(CSVData)
         for row in fileReader:
             dataList.append(row)
-    fakingData.writeToCSV(dataList)
     return dataList

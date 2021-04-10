@@ -10,7 +10,7 @@ To run this project, simply run the file [main](functions/main.py)
 
 # Data Load File:
 
-- [teamTable](resources/teamTable.csv) acts as our external call. This is in place of a database which would essentially act as our "live" data that we would pull into the file. Doubling for this file is in the form of repeat .csv's but are intended to show the logic of how doubling would operate had we used live external data.
+- [teamTable](resources/teamTable.csv) acts as our external call. This is in place of a database which would essentially act as our "live" data that we would pull into the file. Doubling for this file is in the form of repeat .csv's but are intended to show the logic of how doubling would operate had we used live external data. So assume this is a live external DB.
   
 
 - [readCSV](functions/readCSV.py)
@@ -29,10 +29,10 @@ To run this project, simply run the file [main](functions/main.py)
 
 # Important Examples
 
-- Adapter: [filterDataAdapter](functions/filterDataAdapter.py)
+- Adapter: adapted both functions within [filterData](functions/filterData.py) within [filterDataAdapter](functions/filterDataAdapter.py) so that the two functions do not call [teamTable](resources/teamTable.csv) and instead call doubling files.
   
 
-- Faking: created write to file and read from file methods within [fakingData](functions/fakingData.py) which features in [readCSV](functions/readCSV.py), [filterDataAdapter](functions/filterDataAdapter.py) and [searchTeam](functions/searchTeam.py). Essentially, they capture the most recent user input and most recent file query within the files: [mostRecentTableQuery](resources/mostRecentTableQuery.csv), [mostRecentUserInput](resources/mostRecentUserInput.txt). These are used to fake user inputs and the call to [teamTable](resources/teamTable.csv)
+- Faking: created write to file and read from file methods within [fakingData](functions/fakingData.py) which features in [readCSV](functions/readCSV.py), [filterDataAdapter](functions/filterDataAdapter.py) and [searchTeam](functions/searchTeam.py). Essentially, they capture the most recent user input, and most recent file query within the files: [mostRecentTableQuery](resources/mostRecentTableQuery.csv), [mostRecentUserInput](resources/mostRecentUserInput.txt). These are used to fake user inputs and the call to [teamTable](resources/teamTable.csv).
   
 
 - Stub: [getHeadings](functions/filterData.py) calls the [teamTable](resources/teamTable.csv) to retrieve the headings. [headingsStub](resources/headingsStub.csv) is passed to the [getHeadingsAdapter](functions/filterDataAdapter.py) which allows the code to run without 
