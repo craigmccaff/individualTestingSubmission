@@ -32,7 +32,10 @@ To run this project, simply run the file [main](functions/main.py)
 - Adapter: adapted both functions within [filterData](functions/filterData.py) within [filterDataAdapter](functions/filterDataAdapter.py) so that the two functions do not call [teamTable](resources/teamTable.csv) and instead call doubling files.
   
 
-- Faking: created write to file and read from file methods within [fakingData](functions/fakingData.py) which features in [readCSV](functions/readCSV.py), [filterDataAdapter](functions/filterDataAdapter.py) and [searchTeam](functions/searchTeam.py). Essentially, they capture the most recent user input, and most recent file query within the files: [mostRecentTableQuery](resources/mostRecentTableQuery.csv), [mostRecentUserInput](resources/mostRecentUserInput.txt). These are used to fake user inputs and the call to [teamTable](resources/teamTable.csv).
+- Faking: created write to file and read from file methods within [fakingData](functions/fakingData.py) which writes most recent input and file from within [filterData](functions/readCSV.py). Essentially, they capture the most recent user input, and most recent file query within the files: [mostRecentTableQuery](resources/mostRecentTableQuery.csv), [mostRecentUserInput](resources/mostRecentUserInput.txt). These are used to fake user inputs and the call to [teamTable](resources/teamTable.csv). These are then used to test whether the input name matches the output.
+
+
+Faking Test: [test_inputNameEqualsOutputName](tests/test_filterData.py)
   
 
-- Stub: [getHeadings](functions/filterData.py) calls the [teamTable](resources/teamTable.csv) to retrieve the headings. [headingsStub](resources/headingsStub.csv) is passed to the [getHeadingsAdapter](functions/filterDataAdapter.py) which allows the code to run without 
+- Stub: [getHeadings](functions/filterData.py) calls the [teamTable](resources/teamTable.csv) to retrieve the headings. To double this, [headingsStub](resources/headingsStub.csv) is passed to the [getHeadingsAdapter](functions/filterDataAdapter.py) which allows the code to run without calling [teamTable](resources/teamTable.csv)

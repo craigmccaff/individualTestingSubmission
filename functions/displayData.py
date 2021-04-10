@@ -2,7 +2,7 @@ from functions import filterData, goalDifference, pointsCalculator
 
 
 def displayData(team):
-    data = filterData.filterData(team)
+    data = filterData.filterTeamData(team)
     headings = filterData.getHeadings()
     for index, element in enumerate(data):
         print(headings[index], ": ", data[index])

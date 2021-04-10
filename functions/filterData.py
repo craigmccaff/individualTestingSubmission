@@ -1,13 +1,13 @@
 from functions import readCSV, searchTeam, fakingData
 
 
-def filterData(teamName, file = "teamTable.csv"):
+def filterTeamData(teamName, file ="teamTable.csv"):
     table = readCSV.getData(file)
     fakingData.writeToCSV(table)
     flag = True
 
     while flag:
-        for data in table:
+        for data in table[1:]:
             if data[0] == teamName:
                 fakingData.writeRecentUserInput(teamName)
                 return data
