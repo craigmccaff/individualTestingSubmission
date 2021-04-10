@@ -32,10 +32,37 @@ To run this project, simply run the file [main](functions/Main.py)
 - Adapter: adapted both functions within [filterData](functions/FilterData.py) within [filterDataAdapter](functions/FilterDataAdapter.py) so that the two functions do not call [teamTable](resources/TeamTable.csv) and instead call doubling files.
   
 
-- Faking: created write to file and read from file methods within [fakingData](functions/FakingData.py) which writes most recent input and file from within [filterData](functions/ReadCSV.py). Essentially, they capture the most recent user input, and most recent file query within the files: [mostRecentTableQuery](resources/MostRecentTableQuery.csv), [mostRecentUserInput](resources/MostRecentUserInput.txt). These are used to fake user inputs and the call to [teamTable](resources/TeamTable.csv). These are then used to test whether the input name matches the output.
+- Faking: created write to file and read from file methods within [fakingData](functions/FakingData.py) which writes most recent input and file from within [filterData](functions/ReadCSV.py). Essentially, they capture the most recent user input, and most recent file query within the files: [mostRecentTableQuery](resources/MostRecentTableQuery.csv), [mostRecentUserInput](resources/MostRecentUserInput.txt). These are used to fake user inputs and the call to [teamTable](resources/TeamTable.csv).
 
 
-Faking Test: [test_inputNameEqualsOutputName](tests/TestFilterData.py)
+    Faking Tests: 
+
+[test_inputNameEqualsOutputName/ test_lenListEqualLenHeadings](tests/TestFilterData.py)
+
+[test_fileData (GoalDifference)](tests/TestGoalDifferenceCalculator.py)
+
+[test_fileData (PointsCalculator)](tests/TestPointsCalculator.py)
+
+
+
+- Stub: 
   
+1 - [getHeadings](functions/FilterData.py) calls the [teamTable](resources/TeamTable.csv) to retrieve the headings. To double this, [headingsStub](resources/HeadingsStub.csv) is passed to the [getHeadingsAdapter](functions/FilterDataAdapter.py) which allows the code to run without calling [teamTable](resources/TeamTable.csv). 
 
-- Stub: [getHeadings](functions/FilterData.py) calls the [teamTable](resources/TeamTable.csv) to retrieve the headings. To double this, [headingsStub](resources/HeadingsStub.csv) is passed to the [getHeadingsAdapter](functions/FilterDataAdapter.py) which allows the code to run without calling [teamTable](resources/TeamTable.csv)
+    Stub (1) Tests
+[test_lenListEqualLenHeadings/ test_returnHeadingsValues](tests/TestFilterData.py)
+
+
+2 - [GoalDifference](functions/GoalDifference.py) and [PointsCalculator](functions/PointsCalculator.py) both use data from [TeamTable](resources/TeamTable.csv). For testing, this data is changed to implement hard coded data and the faking files from earlier.
+
+    Stub (2/3) Tests
+[TestGoalDifferenceCalculator](tests/TestGoalDifferenceCalculator.py)
+[TestPointsCalculator](tests/TestPointsCalculator.py)
+
+
+- Mocks: [SearchTeam](functions/SearchTeam.py) asks for a user input which sets the value for what team we want to search for. For testing we use mocks to set the return value of these functions.
+
+
+    Mock Tests
+[test_errorHandlingTeamName/ test_cantReturnHeadings](tests/TestFilterData.py)
+[TestSearchTeam](tests/TestSearchTeam.py)

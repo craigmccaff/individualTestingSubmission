@@ -19,7 +19,7 @@ class TestFilterData(unittest.TestCase):
     def test_lenListEqualsLenHeadings(self):
         self.assertEqual(len(FilterDataAdapter.filterTeamDataAdapter()), len(FilterDataAdapter.getHeadingsAdapter()))
 
-    def test_headingsValues(self):
+    def test_returnHeadingsValues(self):
         self.assertEqual(FilterDataAdapter.getHeadingsAdapter(),
                          ["Team", "Position", "Games Played", "Wins", "Draws", "Losses", "Goals Scored",
                           "Goals Conceded"])
