@@ -35,7 +35,7 @@ To run this project, simply run the file [main](functions/Main.py)
 - Faking: created write to file and read from file methods within [fakingData](functions/FakingData.py) which writes most recent input and file from within [filterData](functions/ReadCSV.py). Essentially, they capture the most recent user input, and most recent file query within the files: [mostRecentTableQuery](resources/MostRecentTableQuery.csv), [mostRecentUserInput](resources/MostRecentUserInput.txt). These are used to fake user inputs and the call to [teamTable](resources/TeamTable.csv).
 
 
-    Faking Tests: 
+    Faking Tests 
 
 [test_inputNameEqualsOutputName/ test_lenListEqualLenHeadings](tests/TestFilterData.py)
 
@@ -49,11 +49,13 @@ To run this project, simply run the file [main](functions/Main.py)
   
 1 - [getHeadings](functions/FilterData.py) calls the [teamTable](resources/TeamTable.csv) to retrieve the headings. To double this, [headingsStub](resources/HeadingsStub.csv) is passed to the [getHeadingsAdapter](functions/FilterDataAdapter.py) which allows the code to run without calling [teamTable](resources/TeamTable.csv). 
 
+
     Stub (1) Tests
 [test_lenListEqualLenHeadings/ test_returnHeadingsValues](tests/TestFilterData.py)
 
 
 2 - [GoalDifference](functions/GoalDifference.py) and [PointsCalculator](functions/PointsCalculator.py) both use data from [TeamTable](resources/TeamTable.csv). For testing, this data is changed to implement hard coded data and the faking files from earlier.
+
 
     Stub (2/3) Tests
 [TestGoalDifferenceCalculator](tests/TestGoalDifferenceCalculator.py)
